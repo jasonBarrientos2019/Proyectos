@@ -1,11 +1,10 @@
 const multiplicar = require("./helper/multiplicar")
+var colors = require('colors');
+const argv= require('./config/yargs')
 
-const argv =require('yargs').argv;
+console.log('base: yargs',argv.base);
 
 
-console.log(process.argv);
-console.log(argv);
-
-// multiplicar(base)
-// .then(nombreArchivo => console.log(nombreArchivo, "Creado"))
-// .catch(err => console.log(err));
+multiplicar(argv.b, argv.l, argv.h)
+.then(nombreArchivo => console.log(nombreArchivo, "Creado"))
+.catch(err => console.log(err));
