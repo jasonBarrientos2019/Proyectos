@@ -1,0 +1,92 @@
+
+/* paleta de colores*/
+
+.paleta{
+  /*azules*/
+  color:#002642 ;
+  color:#1C415C ;
+  color:#2B658F ;
+  color:#6187A2 ;
+
+  /*Gris*/
+  color:#CDCDCD ;
+  color:#9B9B9B ;
+  color: #44484B;
+}
+@font-face {
+  font-family: Code39Azalea;
+  src: url(../assets/fonts/Barcode/Code39Azalea.ttf) format("truetype");
+}
+.codebar{
+
+  font-family: Code39Azalea;
+  font-size: 20pt;
+}
+
+
+/*CSS general */
+* {
+    margin:0;
+    padding:0; 
+    box-sizing: border-box;
+    font-size: 9pt;  
+    font-family: Helvetica;
+
+}
+
+
+/*  esta  sirve cuando se saber q solo ocupara una pagina*/
+.sheet-static{
+  width: 100%;
+  height: 1060px;
+  font-size: 10pt;
+  margin: 20px;
+}
+
+/* width: 730px;
+height: 970px; */
+
+
+.sheet-dynamic{
+  width: 100%;
+  min-height: 1060px;
+  font-size: 10pt;
+  margin: 20px;
+}
+  /*
+  200 mm de width
+  288 mm de height
+  */
+
+  
+  .logo-gobierno{
+    width: 180px;
+    height: 60px;
+  }
+
+  /* Evita que un div con esta clase sea cortado, por el salto de pagina */
+
+.npb{
+  page-break-inside: avoid;
+}
+
+/*tamañode la pagina*/
+@page {
+  size: A4;
+  margin: 20px;
+}
+
+
+  @media print {
+
+    /*se usar  como corte de pagina e inicia una nueva*/
+    .end-page{
+        page-break-before: always;
+    }
+    .sheet-static,.sheet-dynamic{
+      margin: 0px;
+      border: none;
+    }
+    
+  }
+
