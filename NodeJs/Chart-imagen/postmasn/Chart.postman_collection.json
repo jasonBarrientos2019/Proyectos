@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "6ce0830d-9596-4195-add3-65d543467a9a",
+		"name": "Chart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "chart-bar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"document\": {\r\n        \"template\": \"charts\",\r\n        \"format\": \"chart\",\r\n           \"chart\": {\r\n                \"type\": \"bar\",\r\n                \"data\": {\r\n                    \"labels\": [\r\n                        \"Hello world\",\r\n                        \"Foo bar\"\r\n                    ],\r\n                    \"datasets\": [\r\n                        {\r\n                            \"label\": \"Foo\",\r\n                            \"data\": [\r\n                                1,\r\n                                2\r\n                            ]\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/chart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chart-line",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"document\": {\r\n        \"template\": \"charts\",\r\n        \"format\": \"chart\",\r\n           \"chart\": {\r\n                \"type\": \"line\",\r\n                \"data\": {\r\n  \"labels\": \"labels\",\r\n  \"datasets\": [{\r\n    \"label\": \"My First Dataset\",\r\n    \"data\": [65, 59, 80, 81, 56, 55, 40],\r\n    \"fill\": false,\r\n    \"borderColor\": \"rgb(75, 192, 192)\",\r\n    \"tension\": 0.1\r\n  }]\r\n}\r\n            }\r\n        }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/chart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chart-rradar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"document\": {\r\n        \"template\": \"charts\",\r\n        \"format\": \"chart\",\r\n           \"chart\": {\r\n                \"type\": \"radar\",\r\n                \"data\": {\r\n  \"labels\": [\r\n    \"Eating\",\r\n    \"Drinking\",\r\n    \"Sleeping\",\r\n    \"Designing\",\r\n    \"Coding\",\r\n    \"Cycling\",\r\n    \"Running\"\r\n  ],\r\n  \"datasets\": [{\r\n    \"label\": \"My First Dataset\",\r\n    \"data\": [65, 59, 90, 81, 56, 55, 40],\r\n    \"fill\": true,\r\n    \"backgroundColor\": \"rgba(255, 99, 132, 0.2)\",\r\n    \"borderColor\": \"rgb(255, 99, 132)\",\r\n    \"pointBackgroundColor\": \"rgb(255, 99, 132)\",\r\n    \"pointBorderColor\": \"#fff\",\r\n    \"pointHoverBackgroundColor\": \"#fff\",\r\n    \"pointHoverBorderColor\": \"rgb(255, 99, 132)\"\r\n  }, {\r\n    \"label\": \"My Second Dataset\",\r\n    \"data\": [28, 48, 40, 19, 96, 27, 100],\r\n    \"fill\": true,\r\n    \"backgroundColor\": \"rgba(54, 162, 235, 0.2)\",\r\n    \"borderColor\": \"rgb(54, 162, 235)\",\r\n    \"pointBackgroundColor\": \"rgb(54, 162, 235)\",\r\n    \"pointBorderColor\": \"#fff\",\r\n    \"pointHoverBackgroundColor\": \"#fff\",\r\n    \"pointHoverBorderColor\": \"rgb(54, 162, 235)\"\r\n  }]\r\n}\r\n            }\r\n        }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/chart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chart"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

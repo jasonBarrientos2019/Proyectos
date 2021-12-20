@@ -47,6 +47,9 @@ class TemplateProcessor {
       });
 
       const b64Template = await myChart.toDataUrl();
+      myChart.setFormat('png')
+
+      
       $('.charts').append(`<div> <img src="${b64Template}" alt=""> </div>`);
 
       return $.html();

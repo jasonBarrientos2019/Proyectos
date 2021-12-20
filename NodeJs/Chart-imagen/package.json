@@ -15,19 +15,14 @@
     "cheerio": "^1.0.0-rc.10",
     "compression": "^1.7.4",
     "dotenv": "^10.0.0",
-    "exceljs": "^4.3.0",
     "express": "^4.17.1",
     "generic-pool": "^3.8.2",
     "handlebars": "^4.7.6",
-    "image-to-base64": "^2.2.0",
-    "luxon": "^2.0.2",
+    "luxon": "^2.2.0",
     "node-forge": "^0.10.0",
     "node-signpdf": "^1.2.3",
     "pdfkit": "^0.11.0",
     "puppeteer": "^5.5.0"
   },
-  "devDependencies": {
-    "colors": "^1.4.0",
-    "nodemon": "^2.0.12"
-  }
+  "devDependencies": {}
 }
