@@ -57,10 +57,6 @@ class TemplateProcessor {
 
   }
 
-  // ############################ chartsType ############################ 
-
-
-
 }
 
 module.exports = TemplateProcessor;
