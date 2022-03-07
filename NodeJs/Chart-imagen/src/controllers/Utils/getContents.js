@@ -9,14 +9,6 @@ async function getContentPDF(nameTemplate) {
   return fileContent;
 }
 
-async function getContentXLSX(xlsxName) {
-  let pathFile = path.resolve(`${__dirname}/../../templates_xlsx/${xlsxName}.hbs`)
-  let fileContent = fs.readFileSync(pathFile);
-
-  return fileContent;
-}
-
-
 async function getCss(nameCSSFile) {
 
   let pathFile = path.resolve(`${__dirname}/../../${nameCSSFile}`)
@@ -25,10 +17,4 @@ async function getCss(nameCSSFile) {
   return fileContent;
 }
 
-async function getFont(fontName) {
-  let pathFile = path.resolve(`${__dirname}/../${fontName}`)
-  let fileContent = fs.readFileSync(pathFile, "base64");
-  return fileContent;
-}
-
-module.exports = { getContentPDF, getContentXLSX, getCss ,getFont}
+module.exports = { getContentPDF, getCss }

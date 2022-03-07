@@ -1,7 +1,6 @@
 const handlebars = require("handlebars");
 const cheerio = require('cheerio');
-const { DateTime } = require("luxon");
-const ChartJsImage = require('chartjs-to-image');
+const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
 
 
 //registers
@@ -35,25 +34,22 @@ class TemplateProcessor {
 
       var hbResult = await hb({})
       var $ = cheerio.load(hbResult);
-      var input=chart
-      //generate chart 
+    //generate chart 
+    let config = {
+      type: chart.type,
+      data: chart.data
+    };
 
-     
-      const myChart = new ChartJsImage();
+    const width = 500; //px
+    const height = 500; //px
+    const backgroundColour = 'white'; 
 
-      myChart.setConfig({
-        type: chart.type,
-        data: chart.data
-      });
+    const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height, backgroundColour});
+    const base64 = await chartJSNodeCanvas.renderToDataURL(config);
 
-      const b64Template = await myChart.toDataUrl();
-      myChart.setFormat('png')
+     $('.charts').append(`<div> <img src="${base64}" alt=""> </div>`);
 
-      
-      $('.charts').append(`<div> <img src="${b64Template}" alt=""> </div>`);
-
-      return $.html();
-
+    return $.html();
 
   }
 
